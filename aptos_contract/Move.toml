@@ -1,10 +1,11 @@
 [package]
-name = "Examples"
-version = "0.0.0"
+name = "Dittos"
+version = "0.0.1"
 
 [addresses]
-test = "_"
-std = "0x1"
+dittos = "_"
 
-[dependencies]
-AptosFramework = { local = "../../framework/aptos-framework" }
+[dependencies.AptosFramework]
+git = 'https://github.com/aptos-labs/aptos-core.git'
+rev = 'zk-hack'
+subdir = 'aptos-move/framework/aptos-framework'

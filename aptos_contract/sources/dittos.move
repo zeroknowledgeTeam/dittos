@@ -1,4 +1,4 @@
-module test::test {
+module dittos::dittos {
     use std::error;
     use std::signer;
     use aptos_std::groups::{Self, scalar_deserialize, BLS12_381_G1, BLS12_381_G2, deserialize_element_uncompressed, BLS12_381_Gt, BLS12_381_Fr}; //, serialize_element_uncompressed};
@@ -58,8 +58,8 @@ module test::test {
         let public_inputs: vector<groups::Scalar<BLS12_381_Fr>> = vector[
             std::option::extract(&mut scalar_deserialize<BLS12_381_Fr>(&x"8b27a1ae6fe05d7fc384ed97b0d5aad4a8b85ef0bdbc59f47b73b00000000000")),
         ];
-        assert!(verify_proof(&vk, &public_inputs, &proof), 1)
+        assert!(verify_proof(&vk, &public_inputs, &proof), 1);
         // verify_proof(&vk, &public_inputs, &proof)
-        
+
     }
 }
